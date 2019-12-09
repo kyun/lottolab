@@ -1,15 +1,12 @@
-import moment from 'moment-timezone';
+import { APIGatewayProxyHandler } from 'aws-lambda';
+import 'source-map-support/register';
 
-export const hello = async event =>{
+export const hello: APIGatewayProxyHandler = async (event, _context) => {
   return {
     statusCode: 200,
-    body: JSON.stringify(
-      {
-        message: 'Go Serverless v3.0! Your function executed successfully!',
-        input: event,
-      },
-      null,
-      2
-    ),
-  }
-};
+    body: JSON.stringify({
+      message: 'Go Serverless Webpack (Typescript) v1.0! Your function executed successfully!',
+      input: event,
+    }, null, 2),
+  };
+}
