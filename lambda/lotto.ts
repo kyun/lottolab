@@ -1,45 +1,45 @@
-import AWS from "aws-sdk";
+import AWS from 'aws-sdk';
 import { APIGatewayProxyHandler } from 'aws-lambda';
-import axios from "axios";
-import moment from "moment-timezone";
+import axios from 'axios';
+import moment from 'moment-timezone';
 import 'source-map-support/register';
 
 const DYNAMO_DB = new AWS.DynamoDB.DocumentClient();
-const LOTTO_URL = "http://www.nlotto.co.kr/common.do?method=getLottoNumber&drwNo=";
+const LOTTO_URL = 'http://www.nlotto.co.kr/common.do?method=getLottoNumber&drwNo=';
 
 export const updateNumber: APIGatewayProxyHandler = async (event) => {
   try {
     const { no } = event?.queryStringParameters ?? { no: null };
-    const now = moment().tz("Asia/Seoul");
-    console.log(`queryStringParameter is ${no}`)
+    const now = moment().tz('Asia/Seoul');
+    console.log(`queryStringParameter is ${no}`);
 
-    const { data } = await axios.get(`${LOTTO_URL}${no}`).catch((e)=>{ throw e });
+    const { data } = await axios.get(`${LOTTO_URL}${no}`).catch((e) => { throw e; });
     const price = Number(no) < 88 ? 2000 : 1000;
     const params = {
-      TableName: "lotto_numbers",
+      TableName: 'lotto_numbers',
       Item: {
-        no: no,
-        price: price,
-        year: moment(data.drwNoDate).format("YYYY"),
-        month: moment(data.drwNoDate).format("MM"),
+        no,
+        price,
+        year: moment(data.drwNoDate).format('YYYY'),
+        month: moment(data.drwNoDate).format('MM'),
         total: data.totSellamnt / price,
-        createdAt: now.format("YYYY-MM-DD HH:mm:ss"),
+        createdAt: now.format('YYYY-MM-DD HH:mm:ss.SSS'),
         timestamp: now.unix(),
-        ...data
+        ...data,
       },
       Expected: {
-        "no": {
-          "Exists": false
-        }
-      }
-    }
-    const res: any = await DYNAMO_DB.put(params).promise().catch((e)=>{ throw e; });
+        no: {
+          Exists: false,
+        },
+      },
+    };
+    const res: any = await DYNAMO_DB.put(params).promise().catch((e) => { throw e; });
     return {
       statusCode: 200,
       body: JSON.stringify({
-        no: no,
+        no,
         res,
-        requestedAt: now
+        requestedAt: now,
       }, null, 2),
     };
   } catch (e) {
@@ -47,11 +47,11 @@ export const updateNumber: APIGatewayProxyHandler = async (event) => {
       statusCode: 500,
       body: JSON.stringify({
         ...e,
-        message: e.message
-      })
-    }
+        message: e.message,
+      }),
+    };
   }
-}
+};
 
 export const updateBot: APIGatewayProxyHandler = async (event: any) => {
   try {

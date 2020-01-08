@@ -47,3 +47,9 @@ functions:
       - http:
           path: updateNumber
           method: get
+  calcData:
+    handler: src/lotto/calcData.calcData
+    events:
+      - http:
+          path: calcData
+          method: get
