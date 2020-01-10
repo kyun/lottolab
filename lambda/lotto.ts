@@ -12,7 +12,6 @@ export const updateNumber: APIGatewayProxyHandler = async (event) => {
     const { no } = event?.queryStringParameters ?? { no: null };
     const now = moment().tz('Asia/Seoul');
     console.log(`queryStringParameter is ${no}`);
-
     const { data } = await axios.get(`${LOTTO_URL}${no}`).catch((e) => { throw e; });
     const price = Number(no) < 88 ? 2000 : 1000;
     const params = {
@@ -53,35 +52,36 @@ export const updateNumber: APIGatewayProxyHandler = async (event) => {
   }
 };
 
-export const updateBot: APIGatewayProxyHandler = async (event: any) => {
+export const updateBot: APIGatewayProxyHandler = async (evt: any) => {
   try {
-    const now = moment().tz("Asia/Seoul");
-    const start = moment("2002-12-02");
+    console.log(evt);
+    const now = moment().tz('Asia/Seoul');
+    const start = moment('2002-12-02');
     const no = ~~(moment.duration(now.diff(start)).asWeeks()) + 1;
-    const { data } = await axios.get(`${LOTTO_URL}${no}`).catch((e)=>{ throw e; });
-    if (data.returnValue !== "success" || data.totSellamnt === 0) {
+    const { data } = await axios.get(`${LOTTO_URL}${no}`).catch((e) => { throw e; });
+    if (data.returnValue !== 'success' || data.totSellamnt === 0) {
       throw { message: `${now.format('YYYY-MM-DD HH:mm:ss')}::Fail to get ${no}th winning numbers` }
     }
     const price = no < 88 ? 2000 : 1000;
     const params = {
-      TableName: "lotto_numbers",
+      TableName: 'lotto_numbers',
       Item: {
-        no: no,
-        price: price,
-        year: moment(data.drwNoDate).format("YYYY"),
-        month: moment(data.drwNoDate).format("MM"),
+        no,
+        price,
+        year: moment(data.drwNoDate).format('YYYY'),
+        month: moment(data.drwNoDate).format('MM'),
         total: data.totSellamnt / price,
-        createdAt: now.format("YYYY-MM-DD HH:mm:ss"),
+        createdAt: now.format('YYYY-MM-DD HH:mm:ss'),
         timestamp: now.unix(),
-        ...data
+        ...data,
       },
       Expected: {
-        "no": {
-          "Exists": false
+        no: {
+          Exists: false,
         }
       }
     }
-    const res: any = await DYNAMO_DB.put(params).promise().catch((e)=>{ throw e; });
+    const res: any = await DYNAMO_DB.put(params).promise().catch((e) => { throw e; });
     console.log(res);
     return {
       statusCode: 200,
@@ -91,15 +91,13 @@ export const updateBot: APIGatewayProxyHandler = async (event: any) => {
       })
     }
   } catch (e) {
-    console.log("_!@+@!@#!@#+!@#+!@");
     console.log(JSON.stringify(e));
     return {
       statusCode: 500,
       body: JSON.stringify({
         ...e,
-        msg: 'errror'
-      })
-    }
+        msg: 'errror',
+      }),
+    };
   }
-
 };
