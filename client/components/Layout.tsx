@@ -20,12 +20,22 @@ const Layout: React.FunctionComponent<Props> = ({
       <link href="https://fonts.googleapis.com/css?family=Gugi|Noto+Sans+KR:300,400,500,700&display=swap&subset=korean" rel="stylesheet" />    </Head>
     <Header />
     <Tabbar />
-    {children}
+    <main>
+      {children}
+    </main>
+
 
     <style jsx>{`
       .Layout{
         height: 100vh;
         background: linear-gradient(180deg, #38416C 0%, #36627F 100%);
+      }
+      main{
+        box-sizing: border-box;
+        max-width: 768px;
+        width: 100%;
+        margin: auto;
+        padding: 8px;
       }
     `}</style>
   </div>
