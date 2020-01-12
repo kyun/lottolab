@@ -8,6 +8,23 @@ const LottoItem:React.FC<any> = () => {
         <span>893회차 당첨번호</span>
         <span>2020년 01월 12일</span>
       </div>
+      <div className="content">
+        <div className={`LottoBall`}>
+          <span>1</span>
+        </div>
+        <div className={`LottoBall`}>
+          <span>1</span>
+        </div>
+        <div className={`LottoBall`}>
+          <span>1</span>
+        </div>
+        <div className={`LottoBall`}>
+          <span>1</span>
+        </div>
+        <div className={`LottoBall`}>
+          <span>1</span>
+        </div>
+      </div>
       <style jsx>{`
         .LottoItem{
           background: rgba(255,255,255,0.1);
@@ -19,6 +36,19 @@ const LottoItem:React.FC<any> = () => {
           padding: 8px 16px;
           display: flex;
           justify-content: space-between;
+        }
+
+        .LottoBall{
+          display: inline-flex;
+          align-items: center;
+          justify-content: center;
+          width: 28px;
+          height: 28px;
+          background: red;
+          border-radius:3px;
+        }
+        .LottoBall + .LottoBall{
+          margin-left: 4px;
         }
       `}</style>
     </div>
