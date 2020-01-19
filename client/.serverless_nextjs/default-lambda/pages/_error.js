@@ -88,7 +88,7 @@ module.exports =
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = "cTt3");
+/******/ 	return __webpack_require__(__webpack_require__.s = "jrKH");
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -1598,6 +1598,14 @@ module.exports = require("react-ssr-prepass");
 
 /***/ }),
 
+/***/ "8Bbg":
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__("B5Ud")
+
+
+/***/ }),
+
 /***/ "8C61":
 /***/ (function(module, exports) {
 
@@ -1776,6 +1784,14 @@ exports.default = Head;
 if (true) {
   module.exports = __webpack_require__("f/k9");
 } else {}
+
+
+/***/ }),
+
+/***/ "8cZr":
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__("VDXt")
 
 
 /***/ }),
@@ -2843,7 +2859,7 @@ module.exports = __webpack_require__("UDep");
 /***/ "LZ9C":
 /***/ (function(module) {
 
-module.exports = JSON.parse("{\"devFiles\":[],\"pages\":{\"/\":[\"static/runtime/webpack-08f7b238829422e3b9b2.js\",\"static/chunks/commons.68321b828a23f1da0bc3.js\",\"static/runtime/main-7965d95f2c803fb5593b.js\"],\"/_app\":[\"static/runtime/webpack-08f7b238829422e3b9b2.js\",\"static/chunks/commons.68321b828a23f1da0bc3.js\",\"static/runtime/main-7965d95f2c803fb5593b.js\"],\"/_error\":[\"static/runtime/webpack-08f7b238829422e3b9b2.js\",\"static/chunks/commons.68321b828a23f1da0bc3.js\",\"static/runtime/main-7965d95f2c803fb5593b.js\"],\"/_polyfills\":[\"static/runtime/polyfills-83c9f0eea3aa0edfd89e.js\"],\"/about\":[\"static/runtime/webpack-08f7b238829422e3b9b2.js\",\"static/chunks/commons.68321b828a23f1da0bc3.js\",\"static/runtime/main-7965d95f2c803fb5593b.js\"],\"/index\":[\"static/runtime/webpack-08f7b238829422e3b9b2.js\",\"static/chunks/commons.68321b828a23f1da0bc3.js\",\"static/runtime/main-7965d95f2c803fb5593b.js\"],\"/users\":[\"static/runtime/webpack-08f7b238829422e3b9b2.js\",\"static/chunks/commons.68321b828a23f1da0bc3.js\",\"static/runtime/main-7965d95f2c803fb5593b.js\"],\"/users/[id]\":[\"static/runtime/webpack-08f7b238829422e3b9b2.js\",\"static/chunks/commons.68321b828a23f1da0bc3.js\",\"static/runtime/main-7965d95f2c803fb5593b.js\"]}}");
+module.exports = JSON.parse("{\"devFiles\":[],\"pages\":{\"/\":[\"static/runtime/webpack-08f7b238829422e3b9b2.js\",\"static/chunks/commons.03709aeb9c6c353690ff.js\",\"static/runtime/main-5dbc9ccea7be217fa59d.js\"],\"/_app\":[\"static/runtime/webpack-08f7b238829422e3b9b2.js\",\"static/chunks/commons.03709aeb9c6c353690ff.js\",\"static/runtime/main-5dbc9ccea7be217fa59d.js\"],\"/_error\":[\"static/runtime/webpack-08f7b238829422e3b9b2.js\",\"static/chunks/commons.03709aeb9c6c353690ff.js\",\"static/runtime/main-5dbc9ccea7be217fa59d.js\"],\"/_polyfills\":[\"static/runtime/polyfills-29b7810566e8516cb3f7.js\"],\"/index\":[\"static/runtime/webpack-08f7b238829422e3b9b2.js\",\"static/chunks/commons.03709aeb9c6c353690ff.js\",\"static/runtime/main-5dbc9ccea7be217fa59d.js\"]}}");
 
 /***/ }),
 
@@ -3005,6 +3021,14 @@ module.exports = function (Base, NAME, Constructor, next, DEFAULT, IS_SET, FORCE
   }
   return methods;
 };
+
+
+/***/ }),
+
+/***/ "MX0m":
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__("3niX")
 
 
 /***/ }),
@@ -5130,6 +5154,54 @@ function stattag (stat) {
 
 /***/ }),
 
+/***/ "Y7Z2":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var styled_jsx_style__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("MX0m");
+/* harmony import */ var styled_jsx_style__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(styled_jsx_style__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__("q1tI");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var next_document__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__("8cZr");
+/* harmony import */ var next_document__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(next_document__WEBPACK_IMPORTED_MODULE_2__);
+
+
+var __jsx = react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement;
+ // import './reset.scss';
+
+class CustomDocument extends next_document__WEBPACK_IMPORTED_MODULE_2___default.a {
+  render() {
+    return __jsx("html", {
+      className: "jsx-2990651755"
+    }, __jsx(next_document__WEBPACK_IMPORTED_MODULE_2__["Head"], null, __jsx("meta", {
+      charSet: "utf-8",
+      className: "jsx-2990651755"
+    }), __jsx("meta", {
+      name: "viewport",
+      content: "initial-scale=1.0, width=device-width",
+      className: "jsx-2990651755"
+    }), __jsx("link", {
+      href: "https://fonts.googleapis.com/css?family=Gugi|Noto+Sans+KR:300,400,500,700&display=swap&subset=korean",
+      rel: "stylesheet",
+      className: "jsx-2990651755"
+    }), __jsx("link", {
+      rel: "icon",
+      type: "image/x-icon",
+      href: "/static/favicon.ico",
+      className: "jsx-2990651755"
+    })), __jsx("body", {
+      className: "jsx-2990651755"
+    }, __jsx(next_document__WEBPACK_IMPORTED_MODULE_2__["Main"], null), __jsx(next_document__WEBPACK_IMPORTED_MODULE_2__["NextScript"], null)), __jsx(styled_jsx_style__WEBPACK_IMPORTED_MODULE_0___default.a, {
+      id: "2990651755"
+    }, ["html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video{margin:0;padding:0;border:0;font-size:100%;font:inherit;vertical-align:baseline;}", "article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block;}", "body{line-height:1;}", "ol,ul{list-style:none;}", "blockquote,q{quotes:none;}", "blockquote:before,blockquote:after,q:before,q:after{content:'';content:none;}", "table{border-collapse:collapse;border-spacing:0;}", "*{font-family:'Noto Sans KR',sans-serif;}"]));
+  }
+
+}
+
+/* harmony default export */ __webpack_exports__["a"] = (CustomDocument);
+
+/***/ }),
+
 /***/ "Y7ZC":
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -5647,142 +5719,6 @@ module.exports = function (COLLECTION) {
 
 /***/ }),
 
-/***/ "cTt3":
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "unstable_getStaticProps", function() { return unstable_getStaticProps; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "config", function() { return config; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "_app", function() { return _app; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "renderReqToHTML", function() { return renderReqToHTML; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
-/* harmony import */ var url__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("bzos");
-/* harmony import */ var url__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(url__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var querystring__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__("8xkj");
-/* harmony import */ var querystring__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(querystring__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var next_dist_next_server_server_render__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__("/bjS");
-/* harmony import */ var next_dist_next_server_server_render__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(next_dist_next_server_server_render__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var next_dist_next_server_server_send_html__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__("LuNM");
-/* harmony import */ var next_dist_next_server_server_send_html__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(next_dist_next_server_server_send_html__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var next_plugin_loader_middleware_on_init_server___WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__("GX0O");
-/* harmony import */ var next_plugin_loader_middleware_on_error_server___WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__("KqAr");
-/* harmony import */ var private_dot_next_build_manifest_json__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__("LZ9C");
-var private_dot_next_build_manifest_json__WEBPACK_IMPORTED_MODULE_6___namespace = /*#__PURE__*/__webpack_require__.t("LZ9C", 1);
-/* harmony import */ var private_dot_next_react_loadable_manifest_json__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__("67Bq");
-var private_dot_next_react_loadable_manifest_json__WEBPACK_IMPORTED_MODULE_7___namespace = /*#__PURE__*/__webpack_require__.t("67Bq", 1);
-/* harmony import */ var next_dist_pages_document__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__("VDXt");
-/* harmony import */ var next_dist_pages_document__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(next_dist_pages_document__WEBPACK_IMPORTED_MODULE_8__);
-/* harmony import */ var next_dist_pages_error__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__("/a9y");
-/* harmony import */ var next_dist_pages_error__WEBPACK_IMPORTED_MODULE_9___default = /*#__PURE__*/__webpack_require__.n(next_dist_pages_error__WEBPACK_IMPORTED_MODULE_9__);
-/* harmony import */ var next_dist_pages_app__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__("B5Ud");
-/* harmony import */ var next_dist_pages_app__WEBPACK_IMPORTED_MODULE_10___default = /*#__PURE__*/__webpack_require__.n(next_dist_pages_app__WEBPACK_IMPORTED_MODULE_10__);
-
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    const Component = next_dist_pages_error__WEBPACK_IMPORTED_MODULE_9___default.a
-    /* harmony default export */ __webpack_exports__["default"] = (Component);
-    const unstable_getStaticProps = next_dist_pages_error__WEBPACK_IMPORTED_MODULE_9__['unstable_getStaticProp' + 's']
-    
-    const config = next_dist_pages_error__WEBPACK_IMPORTED_MODULE_9__['confi' + 'g'] || {}
-    const _app = next_dist_pages_app__WEBPACK_IMPORTED_MODULE_10___default.a
-    async function renderReqToHTML(req, res, fromExport) {
-      const options = {
-        App: (next_dist_pages_app__WEBPACK_IMPORTED_MODULE_10___default()),
-        Document: (next_dist_pages_document__WEBPACK_IMPORTED_MODULE_8___default()),
-        buildManifest: private_dot_next_build_manifest_json__WEBPACK_IMPORTED_MODULE_6__,
-        unstable_getStaticProps,
-        reactLoadableManifest: private_dot_next_react_loadable_manifest_json__WEBPACK_IMPORTED_MODULE_7__,
-        canonicalBase: "",
-        buildId: "aLArTlCLEX7WnneYC3AT4",
-        assetPrefix: "",
-        ampBindInitData: false,
-      }
-      let sprData = false
-
-      if (req.url.match(/_next\/data/)) {
-        sprData = true
-        req.url = req.url
-          .replace(new RegExp('/_next/data/aLArTlCLEX7WnneYC3AT4/'), '/')
-          .replace(/\.json$/, '')
-      }
-      const parsedUrl = Object(url__WEBPACK_IMPORTED_MODULE_0__["parse"])(req.url, true)
-      const renderOpts = Object.assign(
-        {
-          Component,
-          pageConfig: config,
-          dataOnly: req.headers && (req.headers.accept || '').indexOf('application/amp.bind+json') !== -1,
-          nextExport: fromExport
-        },
-        options,
-      )
-      try {
-        res.statusCode = 404
-        const params = {};
-        const nowParams = null;
-        let result = await Object(next_dist_next_server_server_render__WEBPACK_IMPORTED_MODULE_2__["renderToHTML"])(req, res, "/_error", Object.assign({}, unstable_getStaticProps ? {} : parsedUrl.query, nowParams ? nowParams : params, sprData ? { _nextSprData: '1' } : {}), renderOpts)
-
-        if (sprData && !fromExport) {
-          const payload = JSON.stringify(renderOpts.sprData)
-          res.setHeader('Content-Type', 'application/json')
-          res.setHeader('Content-Length', Buffer.byteLength(payload))
-          res.setHeader(
-            'Cache-Control',
-            `s-maxage=${renderOpts.revalidate}, stale-while-revalidate`
-          )
-          res.end(payload)
-          return null
-        }
-
-        if (fromExport) return { html: result, renderOpts }
-        return result
-      } catch (err) {
-        if (err.code === 'ENOENT') {
-          res.statusCode = 404
-          const result = await Object(next_dist_next_server_server_render__WEBPACK_IMPORTED_MODULE_2__["renderToHTML"])(req, res, "/_error", parsedUrl.query, Object.assign({}, options, {
-            Component: next_dist_pages_error__WEBPACK_IMPORTED_MODULE_9___default.a
-          }))
-          return result
-        } else {
-          console.error(err)
-          res.statusCode = 500
-          const result = await Object(next_dist_next_server_server_render__WEBPACK_IMPORTED_MODULE_2__["renderToHTML"])(req, res, "/_error", parsedUrl.query, Object.assign({}, options, {
-            Component: next_dist_pages_error__WEBPACK_IMPORTED_MODULE_9___default.a,
-            err
-          }))
-          return result
-        }
-      }
-    }
-    async function render (req, res) {
-      try {
-        await Object(next_plugin_loader_middleware_on_init_server___WEBPACK_IMPORTED_MODULE_4__["default"])()
-        const html = await renderReqToHTML(req, res)
-        if (html) {
-          Object(next_dist_next_server_server_send_html__WEBPACK_IMPORTED_MODULE_3__["sendHTML"])(req, res, html, {generateEtags: true})
-        }
-      } catch(err) {
-        await Object(next_plugin_loader_middleware_on_error_server___WEBPACK_IMPORTED_MODULE_5__["default"])(err)
-        console.error(err)
-        res.statusCode = 500
-        res.end('Internal Server Error')
-      }
-    }
-  
-
-/***/ }),
-
 /***/ "ccE7":
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -5804,6 +5740,83 @@ module.exports = function (TO_STRING) {
   };
 };
 
+
+/***/ }),
+
+/***/ "cha2":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+
+// EXTERNAL MODULE: ./node_modules/@babel/runtime-corejs2/core-js/object/assign.js
+var object_assign = __webpack_require__("UXZV");
+var assign_default = /*#__PURE__*/__webpack_require__.n(object_assign);
+
+// CONCATENATED MODULE: ./node_modules/@babel/runtime-corejs2/helpers/esm/extends.js
+
+function _extends() {
+  _extends = assign_default.a || function (target) {
+    for (var i = 1; i < arguments.length; i++) {
+      var source = arguments[i];
+
+      for (var key in source) {
+        if (Object.prototype.hasOwnProperty.call(source, key)) {
+          target[key] = source[key];
+        }
+      }
+    }
+
+    return target;
+  };
+
+  return _extends.apply(this, arguments);
+}
+// EXTERNAL MODULE: ./node_modules/styled-jsx/style.js
+var style = __webpack_require__("MX0m");
+var style_default = /*#__PURE__*/__webpack_require__.n(style);
+
+// EXTERNAL MODULE: ./node_modules/react/index.js
+var react = __webpack_require__("q1tI");
+var react_default = /*#__PURE__*/__webpack_require__.n(react);
+
+// EXTERNAL MODULE: ./node_modules/next/app.js
+var app = __webpack_require__("8Bbg");
+var app_default = /*#__PURE__*/__webpack_require__.n(app);
+
+// CONCATENATED MODULE: ./pages/_app.tsx
+
+
+var __jsx = react_default.a.createElement;
+
+
+
+class _app_MyApp extends app_default.a {
+  // Only uncomment this method if you have blocking data requirements for
+  // every single page in your application. This disables the ability to
+  // perform automatic static optimization, causing every page in your app to
+  // be server-side rendered.
+  //
+  // static async getInitialProps(appContext) {
+  //   // calls page's `getInitialProps` and fills `appProps.pageProps`
+  //   const appProps = await App.getInitialProps(appContext);
+  //
+  //   return { ...appProps }
+  // }
+  render() {
+    const {
+      Component,
+      pageProps
+    } = this.props;
+    return __jsx(react_default.a.Fragment, null, __jsx(Component, _extends({}, pageProps, {
+      className: "jsx-2214543924" + " " + (pageProps && pageProps.className != null && pageProps.className || "")
+    })), __jsx(style_default.a, {
+      id: "2214543924"
+    }, ["body{min-height:100vh;margin:0;}", "h1,h2,h3,h4,h5,p{margin:0;}"]));
+  }
+
+}
+
+/* harmony default export */ var _app = __webpack_exports__["a"] = (_app_MyApp);
 
 /***/ }),
 
@@ -6202,6 +6215,140 @@ module.exports = !__webpack_require__("KUxP")(function () {
   return Object.defineProperty({}, 'a', { get: function () { return 7; } }).a != 7;
 });
 
+
+/***/ }),
+
+/***/ "jrKH":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "unstable_getStaticProps", function() { return unstable_getStaticProps; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "config", function() { return config; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "_app", function() { return _app; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "renderReqToHTML", function() { return renderReqToHTML; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
+/* harmony import */ var url__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("bzos");
+/* harmony import */ var url__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(url__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var querystring__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__("8xkj");
+/* harmony import */ var querystring__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(querystring__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var next_dist_next_server_server_render__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__("/bjS");
+/* harmony import */ var next_dist_next_server_server_render__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(next_dist_next_server_server_render__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var next_dist_next_server_server_send_html__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__("LuNM");
+/* harmony import */ var next_dist_next_server_server_send_html__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(next_dist_next_server_server_send_html__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var next_plugin_loader_middleware_on_init_server___WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__("GX0O");
+/* harmony import */ var next_plugin_loader_middleware_on_error_server___WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__("KqAr");
+/* harmony import */ var private_dot_next_build_manifest_json__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__("LZ9C");
+var private_dot_next_build_manifest_json__WEBPACK_IMPORTED_MODULE_6___namespace = /*#__PURE__*/__webpack_require__.t("LZ9C", 1);
+/* harmony import */ var private_dot_next_react_loadable_manifest_json__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__("67Bq");
+var private_dot_next_react_loadable_manifest_json__WEBPACK_IMPORTED_MODULE_7___namespace = /*#__PURE__*/__webpack_require__.t("67Bq", 1);
+/* harmony import */ var private_next_pages_document_tsx__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__("Y7Z2");
+/* harmony import */ var next_dist_pages_error__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__("/a9y");
+/* harmony import */ var next_dist_pages_error__WEBPACK_IMPORTED_MODULE_9___default = /*#__PURE__*/__webpack_require__.n(next_dist_pages_error__WEBPACK_IMPORTED_MODULE_9__);
+/* harmony import */ var private_next_pages_app_tsx__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__("cha2");
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    const Component = next_dist_pages_error__WEBPACK_IMPORTED_MODULE_9___default.a
+    /* harmony default export */ __webpack_exports__["default"] = (Component);
+    const unstable_getStaticProps = next_dist_pages_error__WEBPACK_IMPORTED_MODULE_9__['unstable_getStaticProp' + 's']
+    
+    const config = next_dist_pages_error__WEBPACK_IMPORTED_MODULE_9__['confi' + 'g'] || {}
+    const _app = private_next_pages_app_tsx__WEBPACK_IMPORTED_MODULE_10__[/* default */ "a"]
+    async function renderReqToHTML(req, res, fromExport) {
+      const options = {
+        App: private_next_pages_app_tsx__WEBPACK_IMPORTED_MODULE_10__[/* default */ "a"],
+        Document: private_next_pages_document_tsx__WEBPACK_IMPORTED_MODULE_8__[/* default */ "a"],
+        buildManifest: private_dot_next_build_manifest_json__WEBPACK_IMPORTED_MODULE_6__,
+        unstable_getStaticProps,
+        reactLoadableManifest: private_dot_next_react_loadable_manifest_json__WEBPACK_IMPORTED_MODULE_7__,
+        canonicalBase: "",
+        buildId: "Q54NgNa6BxUdPijW8Hauf",
+        assetPrefix: "",
+        ampBindInitData: false,
+      }
+      let sprData = false
+
+      if (req.url.match(/_next\/data/)) {
+        sprData = true
+        req.url = req.url
+          .replace(new RegExp('/_next/data/Q54NgNa6BxUdPijW8Hauf/'), '/')
+          .replace(/\.json$/, '')
+      }
+      const parsedUrl = Object(url__WEBPACK_IMPORTED_MODULE_0__["parse"])(req.url, true)
+      const renderOpts = Object.assign(
+        {
+          Component,
+          pageConfig: config,
+          dataOnly: req.headers && (req.headers.accept || '').indexOf('application/amp.bind+json') !== -1,
+          nextExport: fromExport
+        },
+        options,
+      )
+      try {
+        res.statusCode = 404
+        const params = {};
+        const nowParams = null;
+        let result = await Object(next_dist_next_server_server_render__WEBPACK_IMPORTED_MODULE_2__["renderToHTML"])(req, res, "/_error", Object.assign({}, unstable_getStaticProps ? {} : parsedUrl.query, nowParams ? nowParams : params, sprData ? { _nextSprData: '1' } : {}), renderOpts)
+
+        if (sprData && !fromExport) {
+          const payload = JSON.stringify(renderOpts.sprData)
+          res.setHeader('Content-Type', 'application/json')
+          res.setHeader('Content-Length', Buffer.byteLength(payload))
+          res.setHeader(
+            'Cache-Control',
+            `s-maxage=${renderOpts.revalidate}, stale-while-revalidate`
+          )
+          res.end(payload)
+          return null
+        }
+
+        if (fromExport) return { html: result, renderOpts }
+        return result
+      } catch (err) {
+        if (err.code === 'ENOENT') {
+          res.statusCode = 404
+          const result = await Object(next_dist_next_server_server_render__WEBPACK_IMPORTED_MODULE_2__["renderToHTML"])(req, res, "/_error", parsedUrl.query, Object.assign({}, options, {
+            Component: next_dist_pages_error__WEBPACK_IMPORTED_MODULE_9___default.a
+          }))
+          return result
+        } else {
+          console.error(err)
+          res.statusCode = 500
+          const result = await Object(next_dist_next_server_server_render__WEBPACK_IMPORTED_MODULE_2__["renderToHTML"])(req, res, "/_error", parsedUrl.query, Object.assign({}, options, {
+            Component: next_dist_pages_error__WEBPACK_IMPORTED_MODULE_9___default.a,
+            err
+          }))
+          return result
+        }
+      }
+    }
+    async function render (req, res) {
+      try {
+        await Object(next_plugin_loader_middleware_on_init_server___WEBPACK_IMPORTED_MODULE_4__["default"])()
+        const html = await renderReqToHTML(req, res)
+        if (html) {
+          Object(next_dist_next_server_server_send_html__WEBPACK_IMPORTED_MODULE_3__["sendHTML"])(req, res, html, {generateEtags: true})
+        }
+      } catch(err) {
+        await Object(next_plugin_loader_middleware_on_error_server___WEBPACK_IMPORTED_MODULE_5__["default"])(err)
+        console.error(err)
+        res.statusCode = 500
+        res.end('Internal Server Error')
+      }
+    }
+  
 
 /***/ }),
 

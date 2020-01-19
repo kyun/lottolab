@@ -1,30 +1,19 @@
-import * as React from 'react'
-import Link from 'next/link'
-import Head from 'next/head'
-import Header from './common/Header'
-import Tabbar from './common/Tabbar'
+import * as React from 'react';
+import Head from 'next/head';
 
-type Props = {
-  title?: string
-}
 
-const Layout: React.FunctionComponent<Props> = ({
+
+const Layout: React.FunctionComponent<any> = ({
   children,
   title = 'This is the default title',
 }) => (
   <div className="Layout">
     <Head>
       <title>{title}</title>
-      <meta charSet="utf-8" />
-      <meta name="viewport" content="initial-scale=1.0, width=device-width" />
-      <link href="https://fonts.googleapis.com/css?family=Gugi|Noto+Sans+KR:300,400,500,700&display=swap&subset=korean" rel="stylesheet" />    </Head>
-    <Header />
-    <Tabbar />
+    </Head>
     <main>
       {children}
     </main>
-
-
     <style jsx>{`
       .Layout{
         height: 100vh;
@@ -39,6 +28,5 @@ const Layout: React.FunctionComponent<Props> = ({
       }
     `}</style>
   </div>
-)
-
-export default Layout
+);
+export default Layout;

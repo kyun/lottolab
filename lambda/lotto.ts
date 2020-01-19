@@ -52,6 +52,7 @@ export const updateNumber: APIGatewayProxyHandler = async (event) => {
   }
 };
 
+
 export const updateBot: APIGatewayProxyHandler = async (evt: any) => {
   try {
     console.log(evt);
@@ -60,13 +61,14 @@ export const updateBot: APIGatewayProxyHandler = async (evt: any) => {
     const no = ~~(moment.duration(now.diff(start)).asWeeks()) + 1;
     const { data } = await axios.get(`${LOTTO_URL}${no}`).catch((e) => { throw e; });
     if (data.returnValue !== 'success' || data.totSellamnt === 0) {
-      throw { message: `${now.format('YYYY-MM-DD HH:mm:ss')}::Fail to get ${no}th winning numbers` }
+      throw { message: `${now.format('YYYY-MM-DD HH:mm:ss')}::Fail to get ${no}th winning numbers` };
     }
+    console.log(`This Number is ${no}.`);
     const price = no < 88 ? 2000 : 1000;
     const params = {
       TableName: 'lotto_numbers',
       Item: {
-        no,
+        no: no.toString(),
         price,
         year: moment(data.drwNoDate).format('YYYY'),
         month: moment(data.drwNoDate).format('MM'),
@@ -75,21 +77,23 @@ export const updateBot: APIGatewayProxyHandler = async (evt: any) => {
         timestamp: now.unix(),
         ...data,
       },
-      Expected: {
-        no: {
-          Exists: false,
-        }
-      }
-    }
-    const res: any = await DYNAMO_DB.put(params).promise().catch((e) => { throw e; });
+      // Expected: {
+      //   no: {
+      //     Exists: false,
+      //   },
+      // },
+    };
+    const res: any = await DYNAMO_DB.put(params).promise().catch((e) => {
+      throw {...e, msg: 'Error while DYNAMO_DB'};
+    });
     console.log(res);
     return {
       statusCode: 200,
       body: JSON.stringify({
         message: 'success',
-        res: { ...res }
-      })
-    }
+        res: { ...res },
+      }),
+    };
   } catch (e) {
     console.log(JSON.stringify(e));
     return {
