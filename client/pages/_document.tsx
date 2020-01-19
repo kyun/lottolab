@@ -3,12 +3,24 @@ import Document, { Head, Main, NextScript } from 'next/document';
 class CustomDocument extends Document {
   public render() {
     return (
+
       <html>
         <Head>
         <meta charSet="utf-8" />
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
         <link href="https://fonts.googleapis.com/css?family=Gugi|Noto+Sans+KR:300,400,500,700&display=swap&subset=korean" rel="stylesheet" />
           <link rel="icon" type="image/x-icon" href="/static/favicon.ico" />
+          <script async src="https://www.googletagmanager.com/gtag/js?id=UA-156516345-1">
+          </script>
+          <script dangerouslySetInnerHTML={
+              { __html: `
+                  window.dataLayer = window.dataLayer || [];
+                  function gtag(){dataLayer.push(arguments);}
+                  gtag('js', new Date());
+                  gtag('config', 'UA-156516345-1');
+              `}
+          }>
+          </script>
         </Head>
         <body>
           <Main />
