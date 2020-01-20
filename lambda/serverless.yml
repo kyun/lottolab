@@ -53,3 +53,17 @@ functions:
       - http:
           path: calcData
           method: get
+  getAll:
+    handler: lotto.getAll
+    events:
+      - http:
+          path: all
+          method: get
+          cors: true
+  crawl:
+    handler: crawler.crawler
+    events:
+      - http:
+          path: crawler
+          method: get
+          cors: true

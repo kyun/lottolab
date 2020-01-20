@@ -52,6 +52,42 @@ export const updateNumber: APIGatewayProxyHandler = async (event) => {
   }
 };
 
+export const getAll: APIGatewayProxyHandler = async (evt) => {
+  try{
+    const params = {
+      TableName: 'lotto_numbers',
+    };
+    const res: any = await DYNAMO_DB.scan(params).promise().catch((e) => {
+      throw {...e, msg: 'Error while DYNAMO_DB'};
+    });
+    return {
+      statusCode: 200,
+      headers: {
+        "Content-Type": "application/json",
+        'Access-Control-Allow-Headers': 'Content-Type,X-Amz-Date,Authorization,X-Api-Key,X-Amz-Security-Token',
+        "Access-Control-Allow-Origin": "*",
+        "Access-Control-Allow-Credentials": true
+      },
+      body: JSON.stringify({
+        ...res,
+      }),
+    };
+  } catch (e) {
+    return {
+      statusCode: 500,
+      headers: {
+        "Content-Type": "application/json",
+        'Access-Control-Allow-Headers': 'Content-Type,X-Amz-Date,Authorization,X-Api-Key,X-Amz-Security-Token',
+        "Access-Control-Allow-Origin": "*",
+        "Access-Control-Allow-Credentials": true
+      },
+      body: JSON.stringify({
+        ...e,
+        message: e.message,
+      }),
+    };
+  }
+}
 
 export const updateBot: APIGatewayProxyHandler = async (evt: any) => {
   try {
