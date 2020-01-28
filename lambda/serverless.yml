@@ -67,3 +67,10 @@ functions:
           path: crawler
           method: get
           cors: true
+  getAllNumers:
+    handler: lotto.getAllNumers
+    events:
+      - http:
+          path: getAllNumers
+          method: get
+          cors: true

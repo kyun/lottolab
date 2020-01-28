@@ -3,9 +3,48 @@ import { APIGatewayProxyHandler } from 'aws-lambda';
 import axios from 'axios';
 import moment from 'moment-timezone';
 import 'source-map-support/register';
+import jwt from 'jsonwebtoken';
 
 const DYNAMO_DB = new AWS.DynamoDB.DocumentClient();
 const LOTTO_URL = 'http://www.nlotto.co.kr/common.do?method=getLottoNumber&drwNo=';
+
+export const getAllNumber: APIGatewayProxyHandler = async (evt) => {
+  try{
+    const params = {
+      TableName: 'lotto_numbers',
+    };
+    const { Items } = await DYNAMO_DB.scan(params).promise().catch((e) => { throw e; });
+
+    return {
+      statusCode: 200,
+      headers: {
+        'Content-Type': 'application/json',
+        'Access-Control-Allow-Headers': 'Content-Type,X-Amz-Date,Authorization,X-Api-Key,X-Amz-Security-Token',
+        'Access-Control-Allow-Origin': '*',
+        'Access-Control-Allow-Credentials': true,
+      },
+      body: JSON.stringify({
+        messae: 't',
+        Items,
+      }),
+    };
+
+  } catch (e) {
+    return {
+      statusCode: 500,
+      headers: {
+        'Content-Type': 'application/json',
+        'Access-Control-Allow-Headers': 'Content-Type,X-Amz-Date,Authorization,X-Api-Key,X-Amz-Security-Token',
+        'Access-Control-Allow-Origin': '*',
+        'Access-Control-Allow-Credentials': true,
+      },
+      body: JSON.stringify({
+        ...e,
+        message: e.message,
+      }),
+    };
+  }
+}
 
 export const updateNumber: APIGatewayProxyHandler = async (event) => {
   try {
