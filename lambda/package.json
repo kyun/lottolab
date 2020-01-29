@@ -7,12 +7,15 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "dependencies": {
+    "@types/iconv": "^2.1.16",
     "@types/jsonwebtoken": "^8.3.6",
     "@types/moment-timezone": "^0.5.12",
     "aws-sdk": "^2.585.0",
-    "axios": "^0.19.0",
+    "axios": "^0.19.2",
     "cheerio": "^1.0.0-rc.3",
     "got": "^10.2.2",
+    "iconv": "^2.3.5",
+    "iconv-lite": "^0.5.1",
     "jsonwebtoken": "^8.5.1",
     "moment-timezone": "^0.5.27",
     "serverless-bundle": "^1.2.5",
@@ -32,7 +35,7 @@
     "serverless-webpack": "^5.2.0",
     "ts-loader": "^5.3.3",
     "tslint": "^5.20.1",
-    "typescript": "^3.7.4",
+    "typescript": "^3.7.5",
     "webpack": "^4.29.0",
     "webpack-node-externals": "^1.7.2"
   },

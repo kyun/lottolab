@@ -15,6 +15,9 @@ const Tabbar:React.FC<any> = () => {
       </div>
       <style jsx>{`
         .Tabbar{
+          position: absolute;
+          top: 0;
+          left: 0;
           font-family: 'Noto Sans KR', sans-serif;
 
           max-width: 768px;
