@@ -36,24 +36,60 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
     }
 };
 exports.__esModule = true;
-var got_1 = require("got");
+var axios_1 = require("axios");
+var cheerio = require("cheerio");
+var iconv = require("iconv-lite");
 function test() {
     return __awaiter(this, void 0, void 0, function () {
-        var url, data;
+        var response, data, $, second_stores, first_stores;
         return __generator(this, function (_a) {
             switch (_a.label) {
-                case 0:
-                    url = 'https://dhlottery.co.kr/store.do?method=topStore&pageGubun=L645';
-                    return [4 /*yield*/, got_1["default"](url, {
-                            encoding: 'EUC-KR'
-                        })];
+                case 0: return [4 /*yield*/, axios_1["default"].get('https://dhlottery.co.kr/store.do?method=topStore&pageGubun=L645&nowPage=1&drwNo=896', { responseType: 'arraybuffer' })];
                 case 1:
-                    data = _a.sent();
-                    console.log(data.body);
-                    console.log(data);
+                    response = _a.sent();
+                    data = iconv.decode(response.data, 'euc-kr');
+                    $ = cheerio.load(data);
+                    console.log($('.paginate_common > a').last().text());
+                    console.log('1st');
+                    second_stores = [];
+                    first_stores = $('.btns_submit + .group_content table> tbody > tr').toArray().map(function (item, index) {
+                        var obj = { no: index };
+                        $(item).toArray().forEach(function (jtem, jndex) {
+                            var txt = $(jtem).text().trim();
+                            console.log(jndex);
+                            obj['txt'] = txt;
+                            if (jndex === 1) {
+                                obj['name'] = txt;
+                            }
+                            if (jndex === 2) {
+                                obj['auto'] = txt;
+                            }
+                            if (jndex === 3) {
+                                obj['address'] = txt;
+                            }
+                        });
+                        return obj;
+                        console.log($(item).text().trim());
+                        console.log('---');
+                    });
+                    console.log(first_stores);
                     return [2 /*return*/];
             }
         });
     });
 }
 test();
+/*
+  [
+    {
+      name: '노다지훼밀리',
+      isAuto: true,
+      address: '서울 강동구 천호동 393-7번지',
+    }, {
+      name: '노다지훼밀리',
+      isAuto: true,
+      address: '서울 강동구 천호동 393-7번지',
+    }
+  ]
+
+*/ 
