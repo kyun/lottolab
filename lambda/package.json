@@ -12,7 +12,7 @@
     "@types/jsonwebtoken": "^8.3.6",
     "@types/moment-timezone": "^0.5.12",
     "aws-sdk": "^2.585.0",
-    "axios": "^0.19.2",
+    "axios": "^0.21.1",
     "cheerio": "^1.0.0-rc.3",
     "got": "^10.2.2",
     "iconv": "^2.3.5",
